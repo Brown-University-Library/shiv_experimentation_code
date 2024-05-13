@@ -22,7 +22,7 @@ So, this little demo uses basic python code, with one dependency, `requests`, (a
 shiv -c count_orgs -o ../count_hall_hoag_orgs .
 ```
 
-...to get the stand-alone binary. I've since included it here in the repo, since it's not too big. I don't know if github will remove the executable bit on it. If so, re-add it via chmod. And then the usage is just like a unix tool:
+...to get the stand-alone binary. I've since [included it here] in the repo, since it's not too big. I don't know if github will remove the executable bit on it. If so, re-add it via chmod. And then the usage is just like a unix tool:
 
 ```
 $ ./count_hall_hoag_orgs
@@ -41,3 +41,4 @@ That's it for now. Exciting stuff!
 [Shiv vs PEX]: <https://chat.openai.com/share/deac4e2a-8965-4f31-ab0c-2157efeca3cf>
 [Zipapp]: <https://chat.openai.com/share/919749ba-c4d5-4b56-a9db-28037e89c755>
 [Shiv docs]: <https://shiv.readthedocs.io/en/latest/history.html>
+[included it here]: <https://github.com/Brown-University-Library/shiv_experimentation_code/tree/main/the_created_binary>
