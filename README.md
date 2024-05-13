@@ -22,7 +22,11 @@ So, this little demo uses basic python code, with one dependency, `requests`, (a
 shiv -c count_orgs -o ../count_hall_hoag_orgs .
 ```
 
-...to get the stand-alone binary. I've since included it here in the repo, since it's not too big.
+...to get the stand-alone binary. I've since included it here in the repo, since it's not too big. I don't know if github will remove the executable bit on it. If so, re-add it via chmod. And then the usage is just like a unix tool:
+
+```
+$ ./count_hall_hoag_orgs
+```
 
 I haven't really had much of a chance to evaluate this. I love the wonderful unixy-stand-alone nature of the executable. But I'm used to rust binaries being _blazingly_ fast. Most runs of this executable take almost 3 and a half seconds to do a single API call. Granted, the short testing I've done completely coincided with our repository getting utterly hammered (likely by bots), so badly that it has caused service disruptions. But it makes PEX's caching sound appealing.
 
