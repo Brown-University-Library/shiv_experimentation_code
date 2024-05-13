@@ -11,7 +11,7 @@ import requests
 def prep_org_count():
     """ Prepares count of all orgs in collection.
         Called by dundermain. """
-    ( base_url, q_param, fl_param, rows_param, start_param, all_docs ) = initialize_params()
+    ( base_url, q_param, fl_param, rows_param, start_param, all_docs ) = initialize_vars()
     while True:
         ## build url ----------------------------------------------------
         built_url = f'{base_url}?q={q_param}&fl={fl_param}&rows={rows_param}&start={start_param}'  # it's the start param that'll be updated in the while-loop
@@ -31,7 +31,7 @@ def prep_org_count():
     jsn = json.dumps( output )
     print( jsn )
 
-def initialize_params():
+def initialize_vars():
     base_url = 'https://repository.library.brown.edu/api/search/'
     q_param = '-rel_is_part_of_ssim:*+rel_is_member_of_collection_ssim:"bdr:wum3gm43"'
     fl_param = 'pid,identifier,primary_title'
