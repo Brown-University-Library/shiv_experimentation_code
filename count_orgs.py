@@ -12,9 +12,10 @@ def prep_org_count():
     """ Prepares count of all orgs in collection.
         Called by dundermain. """
     ( base_url, q_param, fl_param, rows_param, start_param, all_docs ) = initialize_vars()
+    static_url_part = f'{base_url}?q={q_param}&fl={fl_param}&rows={rows_param}'
     while True:
         ## build url ----------------------------------------------------
-        built_url = f'{base_url}?q={q_param}&fl={fl_param}&rows={rows_param}&start={start_param}'  # it's the start param that'll be updated in the while-loop
+        built_url = f'{static_url_part}&start={start_param}'  # it's the start param that'll be updated in the while-loop
         ## retrieve data ------------------------------------------------
         rsp: requests.models.Response = requests.get( built_url )
         data: dict = rsp.json()
