@@ -8,5 +8,5 @@ setup(
     entry_points={
         "console_scripts": ["count_orgs=count_orgs:prep_org_count"],
     },
-    install_requires=['requests==2.26.0'],
+    install_requires=['requests==2.32.0'],
 )
